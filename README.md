@@ -1,6 +1,7 @@
 # amqp-filter: A SQL92 predicate evaluator in Erlang.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/s0qkoslmgooyw0vv?svg=true)](https://ci.appveyor.com/project/pedro.armando/sql92-expression-evaluator)
+[![Build status](https://ci.appveyor.com/api/projects/status/johbwgju5aikqs76?svg=true)]
+(https://ci.appveyor.com/project/pedro.armando/amqp-filter)
 
 **amqp-filter** is an Erlang library that allows to evaluate SQL-92 predicates in the same way as in Azure Service Bus.
 
