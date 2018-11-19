@@ -1,0 +1,14 @@
+{application, amqp_filter,
+ [{description, "A SQL92 predicate evaluator in Erlang"},
+  {vsn, "0.3.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+  {maintainers, []},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.

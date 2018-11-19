@@ -1,0 +1,26 @@
+image: Visual Studio 2017
+
+environment:
+  matrix:
+  - erlang_vsn: 19.2 
+  HEX_USERNAME:
+    secure: NhoUKm/yqWuqC3l5VgCHoA==
+  HEX_API_KEY:
+    secure: HZD5em6F7P486udoBk0+n9TeuTWrVq6mKEYmRvbRsGzWEuMQr8+RMe3jbAgw/tCf
+
+before_build:
+  - ps: . .\scripts\update-version.ps1
+  - ps: . .\scripts\install-plugins.ps1
+
+build: off
+build_script:
+  - ps: . .\scripts\rebar3.cmd compile
+
+after_build:
+  - ps: . .\scripts\update-documentation.ps1
+
+test_script:
+  - ps: . .\scripts\rebar3.cmd eunit
+
+deploy_script:
+  - ps: . .\scripts\publish-hex.ps1 -Username $Env:HEX_USERNAME -ApiKey $Env:HEX_API_KEY

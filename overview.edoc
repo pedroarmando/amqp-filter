@@ -1,0 +1,25 @@
+** this is the overview.doc file for the application **
+
+   @author Pedro Perez
+
+   @version 0.3.0
+   @title amqp-filter
+
+    @doc <h3>Description</h3>
+    amqp-filter is an Erlang library that allows to evaluate SQL-92 predicates in the same way as in Azure Service Bus.
+
+    It supports the BNF grammar specified 
+    <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-filter" target="_blank">here</a>.
+
+    To create the lexer and parser we have used <a href="http://erlang.org/doc/man/leex.html" target="_blank">leex</a> and 
+    <a href="http://erlang.org/doc/man/yecc.html" target="_blank">yecc</a>.
+
+    <h3>Usage:</h3>
+    ```
+    evaluator:evaluate("ID IN (123, 456, 789)", [{"ID", 456}]).
+    true
+    evaluator:evaluate("USERNAME = 'NICK' AND AGE > 18", [{ "USERNAME", "NICK" }, { "AGE", 25 }]).
+    true
+    evaluator:evaluate("YEAR % 4 = 0 AND (NOT YEAR % 100 = 0 OR YEAR % 400 = 0)", [{ "YEAR", 2018 }]).
+    false
+    '''
