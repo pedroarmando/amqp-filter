@@ -21,7 +21,7 @@ false
 
 ## Integrate to your project
 
-**amqp-filter** is available as a [Hex.pm package](https://hex.pm/packages/amqp-filter) and uses [Rebar 3](http://www.rebar3.org/) as its build system so
+**amqp-filter** is available as a [Hex.pm package](https://hex.pm/packages/amqp_filter) and uses [Rebar 3](http://www.rebar3.org/) as its build system so
 it can be easily integrated in your project.
 
 ### Rebar
