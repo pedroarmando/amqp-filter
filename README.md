@@ -48,7 +48,7 @@ Adding **amqp-filter** as a package dependency in your `mix.exs` file:
 ```elixir
 def project do
   [
-    deps: [{:amqp, "~> 0.3.7"}]
+    deps: [{:amqp_filter, "~> 0.3.7"}]
   ]
 end
 ```
