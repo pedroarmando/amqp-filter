@@ -1,4 +1,4 @@
-# amqp-filter: A SQL92 predicate evaluator in Erlang.
+# amqp-filter: An SQL92 predicate evaluator in Erlang.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/johbwgju5aikqs76?svg=true)](https://ci.appveyor.com/project/pedro.armando/amqp-filter)
 
@@ -19,7 +19,7 @@ amqp_filter:evaluate("YEAR % 4 = 0 AND (NOT YEAR % 100 = 0 OR YEAR % 400 = 0)", 
 false
 ```
 
-## Integrate to your project
+## Integrating to your project
 
 **amqp-filter** is available as a [Hex.pm package](https://hex.pm/packages/amqp_filter) and uses [Rebar 3](http://www.rebar3.org/) as its build system so
 it can be easily integrated in your project.
@@ -48,7 +48,7 @@ Adding **amqp-filter** as a package dependency in your `mix.exs` file:
 ```elixir
 def project do
   [
-    deps: [{:amqp, "~> 0.3.7"}]
+    deps: [{:amqp_filter, "~> 0.3.7"}]
   ]
 end
 ```
@@ -56,3 +56,10 @@ end
 ## Complete documentation
 
 See https://hexdocs.pm/amqp_filter/ for a complete documentation.
+
+## Building
+
+It is recommended to build `amqp-filter` on Linux.
+
+- Download Erlang/OTP 20.x or later from [Erlang Solutions](https://www.erlang-solutions.com/resources/download.html)
+- Run `./build.sh` 
