@@ -2,9 +2,10 @@
 
 # Generate Leex lexical analyzer source code
 
-#pushd src/ >/dev/nul
-#erl -pa ebin -noshell -eval "leex:file(expression_lexer)." -eval "init:stop()."
-#popd >/dev/nul
+pushd src/ >/dev/nul
+erl -pa ebin -noshell -eval "leex:file(expression_lexer)." -eval "init:stop()."
+popd >/dev/nul
+
 # Build
 
 ./scripts/rebar3 clean
